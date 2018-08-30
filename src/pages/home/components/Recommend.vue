@@ -18,47 +18,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_200x200_0e98aabe.jpg',
-          title: '武隆天坑地缝国家地质公园',
-          desc: '武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_200x200_0e98aabe.jpg',
-          title: '武隆天坑地缝国家地质公园',
-          desc: '武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_200x200_0e98aabe.jpg',
-          title: '武隆天坑地缝国家地质公园',
-          desc: '武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩'
-        },
-        {
-          id: '0004',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_200x200_0e98aabe.jpg',
-          title: '武隆天坑地缝国家地质公园',
-          desc: '武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩'
-        },
-        {
-          id: '0005',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_200x200_0e98aabe.jpg',
-          title: '武隆天坑地缝国家地质公园',
-          desc: '武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩'
-        },
-        {
-          id: '0006',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_200x200_0e98aabe.jpg',
-          title: '武隆天坑地缝国家地质公园',
-          desc: '武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩武隆天坑地缝国家地质公园很好玩'
-        }
-      ]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>
