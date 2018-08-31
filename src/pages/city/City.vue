@@ -2,8 +2,14 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :cities="cities" :hotCities="hotCities"></city-list>
-    <city-alphabet :cities="cities"></city-alphabet>
+    <city-list :cities="cities"
+               :hotCities="hotCities"
+               :letter="letter"
+    ></city-list>
+    <city-alphabet :cities="cities"
+                   @change="handleLotterChange"
+
+    ></city-alphabet>
   </div>
 </template>
 
@@ -39,13 +45,17 @@ export default {
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
+    },
+    handleLotterChange (letter) {
+      this.letter = letter
     }
 
   },
   data () {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   }
 }
