@@ -15,64 +15,16 @@
           <div class="button-wrapper">
             <div class="button">北京</div>
           </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
+          <div class="button-wrapper" v-for="item of hotCities" :key="item.id">
+            <div class="button">{{item.name}}</div>
           </div>
         </div>
       </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
+      <div class="area" v-for="(item, key) of cities" :key="key">
+        <div class="title border-topbottom">{{key}}</div>
         <div class="item-list">
-          <div class="item-wrapper border-bottom">
-            <div class="item">澳门</div>
-          </div>
-          <div class="item-wrapper border-bottom">
-            <div class="item">澳门</div>
-          </div>
-          <div class="item-wrapper border-bottom">
-            <div class="item">澳门</div>
-          </div>
-          <div class="item-wrapper border-bottom">
-            <div class="item">澳门</div>
-          </div>
-          <div class="item-wrapper border-bottom">
-            <div class="item">澳门</div>
-          </div>
-          <div class="item-wrapper border-bottom">
-            <div class="item">澳门</div>
-          </div>
-        </div>
-        <div class="title border-topbottom">B</div>
-        <div class="item-list">
-          <div class="item-wrapper border-bottom">
-            <div class="item">北京</div>
-          </div>
-          <div class="item-wrapper border-bottom">
-            <div class="item">北京</div>
-          </div>
-          <div class="item-wrapper border-bottom">
-            <div class="item">北京</div>
-          </div>
-          <div class="item-wrapper border-bottom">
-            <div class="item">北京</div>
-          </div>
-          <div class="item-wrapper border-bottom">
-            <div class="item">北京</div>
-          </div>
-          <div class="item-wrapper border-bottom">
-            <div class="item">北京</div>
+          <div class="item-wrapper border-bottom" v-for="inneritem of item" :key="inneritem.id">
+            <div class="item">{{inneritem.name}}</div>
           </div>
         </div>
       </div>
@@ -87,6 +39,10 @@ export default {
   name: 'CityList',
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  props: {
+    cities: Object,
+    hotCities: Array
   }
 }
 </script>
