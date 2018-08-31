@@ -62,10 +62,10 @@ export default {
           }
         }
       }, 16)
+    },
+    handleTouchEnd () {
+      this.touchStatus = false
     }
-  },
-  handleTouchEnd () {
-    this.touchStatus = false
   }
 }
 </script>
